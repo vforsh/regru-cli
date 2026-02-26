@@ -38,8 +38,8 @@ describe("assignment parser", () => {
   });
 
   test("parses key value pair", () => {
-    const parsed = parseAssignments(["username", "yaforsh"]);
-    expect(parsed.username).toBe("yaforsh");
+    const parsed = parseAssignments(["username", "demo-user"]);
+    expect(parsed.username).toBe("demo-user");
   });
 
   test("secret key detection", () => {

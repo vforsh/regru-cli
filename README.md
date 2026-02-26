@@ -2,6 +2,8 @@
 
 `regru-cli` is a Bun-based command line tool for REG.RU API2 focused on non-reseller workflows.
 
+Official API docs: https://www.reg.ru/reseller/api2doc
+
 ## Install
 
 ```bash
@@ -16,7 +18,7 @@ regru --help
 Secrets are never accepted in argv flags.
 
 ```bash
-regru cfg set username yaforsh
+regru cfg set username your-username
 printf 'your-password' | regru cfg set password -
 regru cfg set endpoint=https://api.reg.ru/api/regru2 timeout=20000 retries=1
 ```
@@ -43,10 +45,10 @@ regru services list
 regru domains list
 
 # Get zone records
-regru zone records robowhale.ru
+regru zone records example.test
 
 # Add DNS TXT record (non-reseller API)
-regru zone add txt robowhale.ru subdomain=_acme-challenge text='token-value' ttl=300
+regru zone add txt example.test subdomain=_acme-challenge text='token-value' ttl=300
 
 # Generic call for any non-reseller endpoint
 regru do service/get_list servtype=domain

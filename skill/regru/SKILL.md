@@ -8,7 +8,7 @@ description: Use the regru CLI for REG.RU API2 domain and DNS automation (non-re
 ## Quick start
 
 ```bash
-regru cfg set username yaforsh
+regru cfg set username your-username
 printf 'your-password' | regru cfg set password -
 regru doctor
 ```
@@ -19,8 +19,8 @@ regru doctor
 regru nop
 regru domains list
 regru services list --servtype=domain
-regru zone records example.ru
-regru zone add txt example.ru subdomain=_acme-challenge text='token' ttl=300
+regru zone records example.test
+regru zone add txt example.test subdomain=_acme-challenge text='token' ttl=300
 regru do service/get_list servtype=domain
 ```
 
